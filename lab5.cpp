@@ -16,7 +16,7 @@ void newLine();
 
 int main(){
     Student stud;
-   	float sum, Total;
+   	float sum, average;
 		cout << "Enter student records: \n";
 		cout << "ID: ";
 			cin >> stud.id;
@@ -31,21 +31,21 @@ int main(){
     }
     
     cout << "\n\n";
-    cout << "Student Record\n";
+    cout << "Display student records\n";
     cout << "ID: " << stud.id << endl;
-	cout << "Name: Dianne Villuan \n";
-
+    cout << "First Name: " << stud.name.firstName << endl;
+    cout << "Last Name: " << stud.name.lastName << endl;
     for(int i=1; i<4; i++){
-		sum+=stud.grade[i];
+		sum=sum+stud.grade[i];
     }
-		Total= sum/3;
-		cout << "Grade "<< ": " << Total << endl;  
+		average= sum/3;
+		cout << "Grade "<< ": " << average << endl;  
     
-    if (Total<74){
-    	cout<<"Remark: Failed";
+    if (average>74){
+    	cout<<"Remark: Passed";
 	}
 	else{
-		cout<<"Remark: Passed";
+		cout<<"Remark: Failed";
 	}
     
     
@@ -57,4 +57,4 @@ void newLine(){
     do{cin.get(s);}while(s!='\n');     
 }
 
-
+// Dianne V. Villuan
